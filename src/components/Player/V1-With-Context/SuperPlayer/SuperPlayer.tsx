@@ -1,8 +1,8 @@
 import { Box } from "@mui/material";
 import React, { useContext } from "react";
-import { PlayerContext } from "../../../context/PlayerContext";
-import { PlayButton } from "../../UI/Button";
-import { TimeSlider } from "../../UI/Slider";
+import { PlayerContext } from "../../../../context/PlayerContext";
+import { PlayButton } from "../../../UI/Button";
+import { TimeSlider } from "../../../UI/Slider";
 
 interface ISuperPlayerProps {}
 

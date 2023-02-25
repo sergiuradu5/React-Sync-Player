@@ -1,9 +1,9 @@
 import CircularProgress from "@mui/material/CircularProgress";
 import { Box } from "@mui/system";
 import React, { useContext, useEffect, useRef, useState } from "react";
-import { PlayerContext } from "../../../context/PlayerContext";
-import { PlayButton } from "../../UI/Button";
-import { TimeSlider } from "../../UI/Slider";
+import { PlayerContext } from "../../../../context/PlayerContext";
+import { PlayButton } from "../../../UI/Button";
+import { TimeSlider } from "../../../UI/Slider";
 
 interface ISubPlayerProps {
   videoUrl: string;
@@ -20,7 +20,7 @@ const SubPlayer = (props: ISubPlayerProps) => {
 
   const videoRef = useRef<any>(undefined);
 
-  console.log('Subplayer rerendering', videoRef)
+  console.log("Subplayer rerendering", videoRef);
 
   const togglePlay = () => {
     ctx.togglePlay();
@@ -28,7 +28,14 @@ const SubPlayer = (props: ISubPlayerProps) => {
 
   const playerControls =
     loaded && duration ? (
-      <Box sx={{display: "flex", flexDirection: 'column', alignItems: 'center', p: "10px 0"}}>
+      <Box
+        sx={{
+          display: "flex",
+          flexDirection: "column",
+          alignItems: "center",
+          p: "10px 0",
+        }}
+      >
         <PlayButton onClick={togglePlay} isPlaying={isPlaying}></PlayButton>
         <TimeSlider
           duration={duration}
